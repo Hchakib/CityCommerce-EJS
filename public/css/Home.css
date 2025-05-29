@@ -1,0 +1,162 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff; /* Fond blanc */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #7e5a3c; /* Bois moyen (chêne) */
+    border-bottom: 3px solid #5e432f; /* Bordure bois sombre (noix) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header_logo {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+    border: 2px solid #5e432f;
+    border-radius: 50%;
+}
+
+.FashionSphere {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e4d1a1; /* Jaune bois naturel */
+    margin-right: auto;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    gap: 20px; /* Réduit l'écart entre les éléments */
+    margin-left: auto;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e4d1a1; /* Jaune bois naturel */
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #e4d1a1;
+    border-radius: 20px;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    background-color: #e4d1a1;
+    color: #7e5a3c; /* Bois moyen (chêne foncé) */
+    transform: scale(1.1);
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7e5a3c;
+    border: 2px solid #5e432f;
+    border-radius: 10px;
+    z-index: 1000;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #e4d1a1;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropdown-content a:hover {
+    background-color: #e4d1a1;
+    color: #7e5a3c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f4e1c1; /* Fond bois clair */
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3a3a3a; /* Gris foncé pour le contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.category {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.menswear {
+    background: url('/image/imghome1.png') no-repeat center/contain;
+}
+
+.womenswear {
+    background: url('/image/imghome2.png') no-repeat center/contain;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 30%;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+}

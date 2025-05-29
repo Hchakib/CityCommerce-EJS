@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #cecece;
+    border-bottom: 1px solid #ddd;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header_logo {
+    height: 50px;
+    border-radius: 50%;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.FashionSphere {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-right: auto;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
+    margin-right: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+
+
+.users-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.user-item {
+    width: 300px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.user-actions {
+    margin-top: 10px;
+}
+
+.user-actions button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+.confirmation-message {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-cancel {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+.btn-cancel:hover {
+    background-color: darkgray;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin: 20px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2em;
+}
+
+.add-btn {
+    background-color: #20c1f2; 
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 30px auto;
+    display: block; 
+    border: none; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+}
+
+.add-btn:hover {
+    background-color: #0097d3; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-2px); 
+}
+
+
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin: 20px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2em;
+}

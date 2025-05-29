@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #cecece;
+    border-bottom: 1px solid #ddd;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header_logo {
+    height: 50px;
+    border-radius: 50%;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.FashionSphere {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-right: auto;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
+    margin-right: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 150px;
+    padding: 9px;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+.dropdown-content a:hover {
+    background-color: #9d9d9d;
+    color: #fff;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style général pour la page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #444444;
+}
+
+th {
+    font-weight: bold;
+    color: #181818;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+td[colspan="6"] {
+    font-size: 16px;
+    color: #e74c3c;
+    background-color: #f9ebea; 
+}
+
+tbody tr.font-weight-bold {
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button[style*="background-color: #ff6666;"] {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button[style*="background-color: #e74c3c;"]:hover {
+    background-color: #c0392b;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[name="payer"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+input[name="payer"]:hover {
+    background-color: #218838;
+}
+
+input[name="vider_panier"] {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+}
+
+input[name="vider_panier"]:hover {
+    background-color: #c0392b;
+}
+
+p {
+    font-style: italic;
+    text-align: center;
+    margin: 20px;
+    color: #555;
+}

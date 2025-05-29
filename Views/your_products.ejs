@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionSphere</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Product.css">
+    <style>
+       body {
+    font-family: 'Georgia', serif; /* Style de police classique pour un look vintage */
+    background-color: #f9f4ef; /* Couleur de fond douce et neutre */
+    color: #333; /* Couleur de texte sombre */
+    margin: 0;
+    padding: 0;
+}
+
+h3, .h2p {
+    font-weight: normal;
+    color: #5a3e2b; /* Couleur brun classique pour les titres */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille réactive */
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.product-item {
+    background-color: #fff; /* Fond blanc propre */
+    border: 1px solid #d4c5b0; /* Bordure fine pour une esthétique vintage */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #d4c5b0; /* Ligne séparatrice entre l'image et le contenu */
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+    color: #5a3e2b;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #666; /* Couleur gris doux pour le prix */
+    margin-bottom: 15px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Animation de soulèvement au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Accentuation de l'ombre */
+}
+
+.details-btn {
+    background-color: #8c5c42; /* Brun chaud pour le bouton */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: #a16a51; /* Couleur légèrement plus claire au survol */
+}
+
+.notfound {
+    font-size: 20px;
+    color: #8c5c42;
+    text-align: center;
+    margin: 50px 0;
+}
+
+    </style>
+</head>
+<body>
+    <%- include('header') %>
+
+
+    <section>
+        <div class="h2p">Discover Your Vintage Collection</div>
+        <div class="products-container">
+            <% if (products && products.length > 0) { %>  
+                <% products.forEach(product => { %>  
+                    <div class="product-item">
+                        <img src="/image/<%= product.Photo %>" alt="<%= product.Description %>">
+                        <h3><%= product.Description %></h3>
+                        <p><%= product.Prix %> $</p>
+                        <div class="product-actions">
+                            <a href="/detailsProduit/<%= product._id %>">
+                                <button class="details-btn">Details</button>
+                            </a>
+                        </div>
+                    </div>
+                <% }); %>  
+            <% } else { %> 
+                <p class="notfound">No products found.</p>
+            <% } %>
+        </div>
+    </section>
+    
+
+</body>
+</html>

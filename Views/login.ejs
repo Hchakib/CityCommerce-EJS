@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body class="background">
+
+    <section class="logo-section">
+        <img src="/image/img.png" class="logo" alt="Logo">
+        <h2>Connectez-vous à ShelbyFripe</h2>
+    </section>
+
+    <section class="section">
+        <form action="/login" method="post">
+            <label for="Username">Nom d'utilisateur</label> <br>
+            <input type="text" name="Username" id="Username" required> <br><br>
+
+            <label for="Password">Mot de passe</label> <br>
+            <input type="password" name="Password" id="Password" required> <br><br>
+
+            <div class="message">
+                <% if (errorMessage) { %>
+                    <p class="error-message"><%= errorMessage %></p>
+                <% } %>
+            </div>            
+
+            <input type="submit" class="button0" value="Se connecter">
+        </form>
+    </section>
+
+    <section class="section-extra">
+        <p>Créez un nouveau compte ou accédez à votre espace.</p>
+        <div class="actions">
+            <a href="/register" class="button1">S'inscrire</a>
+        </div>
+    </section>
+
+</body>
+</html>

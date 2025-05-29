@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionSphere</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Admin_space.css">
+</head>
+<body>
+    <%- include('header') %>
+
+
+    <a href="/add_product" style="text-decoration: none;"><button class="add-btn">Add a new product</button></a>
+
+    <section>
+        <div class="products-container">
+            <% if (products && products.length > 0) { %>  
+                <% products.forEach(product => { %>  
+                    <div class="product-item">
+                        <img src="/image/<%= product.Photo %>">
+                        <h3><%= product.Description %></h3>
+                        <p><%= product.Prix %> $</p>
+                        <div class="product-actions">
+                            <a href="/details_product/<%= product._id %>""><button class="details-btn">Details</button></a> 
+                            <a href="/edit_product/<%= product._id %>"><button class="edit-btn">Edit</button></a> 
+                            <a href="/delete_product/<%= product._id %>"><button class="delete-btn">Delete</button></a> 
+                        </div>
+                    </div>
+                <% }); %> 
+            <% } else { %> 
+                <p class="notfound">No products found.</p>
+            <% } %>
+        </div>
+    </section>
+    
+</body>
+</html>

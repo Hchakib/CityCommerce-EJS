@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Édition du produit</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('header') %>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f4ef;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Compense la hauteur du header pour éviter la superposition */
+        .edit-product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px); /* Ajustez en fonction de la hauteur du header */
+            padding-top: 200px; /* Hauteur du header */
+        }
+
+        .edit-product-form {
+            background-color: #fff;
+            border: 1px solid #d4c5b0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            color: #5a3e2b;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+            color: #5a3e2b;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #d4c5b0;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+            background-color: #f9f4ef;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #8c5c42;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #a16a51;
+        }
+    </style>
+
+    <section class="edit-product">
+        <div class="edit-product-form">
+            <h2>Add a Product</h2>
+            <form action="/Products" method="post" enctype="multipart/form-data">
+                <label for="Titre">Titre :</label>
+                <input type="text" name="Titre" placeholder="Enter product title" required>
+            
+                <label for="Description">Description :</label>
+                <textarea name="Description" placeholder="Describe your product" required></textarea>
+            
+                <label for="Prix">Prix :</label>
+                <input type="number" name="Prix" step="0.01" placeholder="Enter the price" required>
+            
+                <label for="Categorie">Catégorie :</label>
+                <select name="Categorie" required>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            
+                <label for="Taille">Taille :</label>
+                <input type="text" name="Taille" placeholder="Enter the size" required>
+            
+                <label for="Stock">Stock :</label>
+                <input type="number" name="Stock" placeholder="Enter the stock quantity" required>
+            
+                <label for="Photo">Image :</label>
+                <input type="file" name="Photo" required>
+                
+                <input type="hidden" name="Username" value="<%= username %>">
+            
+                <button type="submit" name="edit">Add Product</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

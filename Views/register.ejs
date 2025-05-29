@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body class="background register-page">
+
+    <section class="section">
+        <form action="/register" method="post">
+            <label for="Name">Nom</label> <br>
+            <input type="text" name="Name" id="Name" required> <br><br>
+
+            <label for="Email">Email</label> <br>
+            <input type="email" name="Email" id="Email" required> <br><br>
+
+            <label for="Username">Nom d'utilisateur</label> <br>
+            <input type="text" name="Username" id="Username" required> <br><br>
+
+            <label for="Password">Mot de passe</label> <br>
+            <input type="password" name="Password" id="Password" required> <br><br>
+
+            <div class="message">
+                <% if (errorMessage) { %>
+                    <p class="error-message"><%= errorMessage %></p>
+                <% } %>
+            </div> 
+
+            <input type="submit" class="button0" value="S'inscrire"><br><br>
+        </form>
+        <a href="/login" class="back">Retour à la connexion</a>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - FashionSphere</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <%- include('header') %>
+
+    <section class="cart">
+        <h2>Shopping Cart</h2>
+        <% if (cart.items.length > 0) { %>
+            <ul>
+                <% cart.items.forEach(item => { %>
+                    <li>
+                        <img src="/image/<%= item.photo %>" alt="<%= item.title %>">
+                        <span><%= item.title %></span>
+                        <span>Quantity: <%= item.quantity %></span>
+                        <span>Price: <%= item.price.toFixed(2) %> $</span>
+                        <form action="/cart/remove" method="POST">
+                            <input type="hidden" name="productId" value="<%= item.productId %>">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </ul>
+            <h3>Total Price: <%= cart.totalPrice.toFixed(2) %> $</h3>
+            <form action="/cart/clear" method="POST">
+                <button type="submit">Clear Cart</button>
+            </form>
+        <% } else { %>
+            <p>Your cart is empty.</p>
+        <% } %>
+    </section>
+    
+
+</body>
+</html>

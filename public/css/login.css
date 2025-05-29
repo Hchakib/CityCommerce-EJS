@@ -1,0 +1,207 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e1;
+}
+
+.background {
+    background: url('/image/vintage-pattern.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.9);
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    font-family: 'Georgia', serif;
+
+}
+
+.section-extra {
+    background-color: #f0e3d6;
+    text-align: center;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+}
+
+.logo-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.button0 {
+    background-color: #B68E56;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button0:hover {
+    background-color: #d5aa6e;
+    transform: scale(1.05);
+}
+
+.button1 {
+    background-color: #B68E56;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button1:hover {
+    background-color: #d5aa6e;
+    transform: scale(1.05);
+}
+
+.section label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5b3c23;
+}
+
+.section input[type="text"],
+.section input[type="password"] {
+    padding: 10px;
+    border: 1px solid #d1a87d;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.section input[type="text"]:focus,
+.section input[type="password"]:focus {
+    border-color: #b68e56;
+    outline: none;
+}
+
+.message {
+    color: #9c3f3f;
+    font-size: 14px;
+}
+
+.error-message {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    color: #5b3c23;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles spécifiques pour la page d'inscription */
+.register-page .section {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    font-family: 'Georgia', serif;
+    margin-top: 50px; /* Décalage vers le haut */
+}
+
+.register-page h2 {
+    font-size: 30px;
+    font-family: 'Georgia', serif;
+    color: #5b3c23;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.register-page .section input[type="text"],
+.register-page .section input[type="email"],
+.register-page .section input[type="password"] {
+    padding: 12px;
+    border: 1px solid #d1a87d;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.register-page .section input[type="text"]:focus,
+.register-page .section input[type="email"]:focus,
+.register-page .section input[type="password"]:focus {
+    border-color: #b68e56;
+    outline: none;
+}
+
+.register-page .button0 {
+    background-color: #B68E56;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-page .button0:hover {
+    background-color: #d5aa6e;
+    transform: scale(1.05);
+}
+
+.register-page .back {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #724bff;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.register-page .back:hover {
+    background-color: #f0d0ff;
+    transform: scale(1.05);
+}

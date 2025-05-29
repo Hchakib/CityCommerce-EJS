@@ -1,4 +1,4 @@
-# 🏙️ CityCommerce-EJS
+# 🏙️ ECommerce-EJS
 
 An Express.js + EJS e-commerce platform built as a final web development project.
 
